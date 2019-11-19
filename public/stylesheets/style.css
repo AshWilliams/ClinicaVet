@@ -1,0 +1,48 @@
+[ng-click],
+[data-ng-click] {
+    cursor: pointer;
+}
+
+.page-flexbox-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+header, main, footer {
+    padding-left: 240px;
+}
+
+@media only screen and (max-width: 1000px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
+.button-collapse {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.hamburguer {
+    font-size: 50px;
+}
+
+body {
+    background-image: url('../img/cartoondog2.png');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-y: 93%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.modal {
+    width: 80% !important;
+    max-height: 85% !important
+}
