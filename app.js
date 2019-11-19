@@ -19,7 +19,6 @@ app.io = require('socket.io')()
 require('./routes/socketio-manager.js')(app.io)
 
 //Conexion a mongo a traves de promesas para evitar el warning:
-//DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated
 mongoose.Promise = global.Promise
 
 //SI NO EXISTE VARIABLE DE ENTORNO PORT ES QUE SE EJECUTA DESDE LOCALHOST//
