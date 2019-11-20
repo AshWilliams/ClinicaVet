@@ -26,6 +26,7 @@ mongoose.Promise = global.Promise
 if (process.env.PORT) {
   mongoose.connect(process.env.MONGODB_URI)
 } else {
+  //mongoose.connect(process.env.COSMOSDB_URI)
   mongoose.connect('mongodb://localhost:C2y6yDjf5%2FR%2Bob0N8A7Cgv30VRDJIWEHLM%2B4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw%2FJw%3D%3D@localhost:10255/petstore?ssl=true', {useMongoClient: true})
   //mongoose.connect("mongodb://petstore:JTLrkXr89ec9HtH3hSCo1Tu3pZHjlTJTwc3L6qv1mIW46bAbgW4y60yH8PdjXFuPrTIj16Fqlm8ir8bsammlYQ%3D%3D@petstore.documents.azure.com:10255/petstore?ssl=true", {useMongoClient: true})
 }
