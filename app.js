@@ -24,7 +24,7 @@ mongoose.Promise = global.Promise
 //SI NO EXISTE VARIABLE DE ENTORNO PORT ES QUE SE EJECUTA DESDE LOCALHOST//
 //Make sure to encode '=' characters as %3D
 if (process.env.PORT) {
-  mongoose.connect(process.env.MONGODB_URI)
+  mongoose.connect('mongodb://localhost:C2y6yDjf5%2FR%2Bob0N8A7Cgv30VRDJIWEHLM%2B4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw%2FJw%3D%3D@localhost:10255/petstore?ssl=true')
 } else {
   //mongoose.connect(process.env.COSMOSDB_URI)
   mongoose.connect('mongodb://localhost:C2y6yDjf5%2FR%2Bob0N8A7Cgv30VRDJIWEHLM%2B4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw%2FJw%3D%3D@localhost:10255/petstore?ssl=true', {useMongoClient: true})
