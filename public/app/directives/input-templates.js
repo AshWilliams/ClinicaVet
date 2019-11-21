@@ -32,6 +32,7 @@ angular.module('inputTemplates', [])
                     $(document).ready(function () {
                         Materialize.updateTextFields();
                         $('select').material_select();
+                        document.querySelectorAll('.select-wrapper').forEach(t => t.addEventListener('click', e=>e.stopPropagation()))
                         $('.parallax').parallax();
                     });
                 },
@@ -113,6 +114,8 @@ angular.module('inputTemplates', [])
                     close: 'Cerrar',
                     format: 'dd-mmm-yyyy',
                     closeOnSelect: true // Close upon selecting a date,
+                }).on('mousedown',function(event){
+                    event.preventDefault();
                 });
             },
             template: '<div class="input-field col {{size}}">' +

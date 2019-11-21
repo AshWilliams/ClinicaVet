@@ -50,8 +50,8 @@ angular.module('petdetailModule', [])
 
                     petsServices.update({id: id}, $scope.pet, (res) => {
                             Materialize.toast('Mascota modificada correctamente', 2000)
-                            history.back()
-                        },
+                            history.back()    
+                         },
                         (err) => {
                             Materialize.toast(err.message, 2000)
                         })
