@@ -6,7 +6,7 @@ const Schema = mongoose.Schema
 const PetSchema = Schema({
   chipNumber: {type: String, required: 'Chip obligatorio'},
   name: {type: String, required: 'Nombre obligatorio'},
-  species: {type: String, required: 'Especie obligatoria'},
+  species: {type: String, required: false},
   sex: {type: String, required: true},
   picUrl: {type: String, required: false},
   owner: {type: String, required: true},
