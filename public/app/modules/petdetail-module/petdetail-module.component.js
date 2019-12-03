@@ -1,5 +1,22 @@
 'use strict'
 
+function monthEs2En(fecha){
+    let mes = fecha.split('-')[1];
+    if(mes == "Ene"){
+        mes = "Jan"
+    }
+    if(mes == "Abr"){
+        mes = "Apr"
+    }
+    if(mes == "Ago"){
+        mes = "Aug"
+    }
+    if(mes == "Dic"){
+        mes = "Dec"
+    }
+    return mes
+}
+
 angular.module('petdetailModule', [])
     .component('petdetailModule', {
 
@@ -61,6 +78,10 @@ angular.module('petdetailModule', [])
                     $scope.pet.owner = id
                     //Al ser un nuevo pet hay que asignarle la id del dueño para relacionarlo
                     $scope.pet.sex = $('input[name=radio_sex]:checked').val()
+                    let mes = monthEs2En($scope.pet.birthDate)
+                    let fecha = $scope.pet.birthDate.split('-')
+                    fecha[1] = mes
+                    $scope.pet.birthDate = fecha.join('-')
                     petsServices.save({}, $scope.pet,
                         (res) => {
                             Materialize.toast('Mascota creada correctamente', 2000)
