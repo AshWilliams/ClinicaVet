@@ -49,7 +49,7 @@ angular.module('appointmentsServices', [])
 
         self.addNewAppointment = (obj) => {
             var q = $q.defer();
-
+            obj.vetId = 1;
             $http.post("api/appointments/", JSON.stringify(obj)).success(function (res) {
                 q.resolve(res);
                 self._cache = {}; // Borrar cache para refrescar nuevos datos //

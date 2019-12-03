@@ -18,9 +18,9 @@ angular.module('inputTemplates', [])
                     });
                 },
                 template: '<div class="input-field col {{size}}">' +
-                '<i class="material-icons prefix">{{icon}}</i>' +
+                '<i class="active material-icons prefix">{{icon}}</i>' +
                 '<input id="{{idfor}}" type="{{type}}" class="validate" ng-model="model">' +
-                '<label class="active" for="{{idfor}}">{{label}}</label>' +
+                '<label class="active active active" for="{{idfor}}">{{label}}</label>' +
                 '</div>'
             }
         })

@@ -25,3 +25,27 @@
 </div>
 
 <init-components></init-components>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // code
+  
+  setTimeout(function(){ 
+    var labels = document.getElementsByTagName("label");
+    for(let i = 0; i < labels.length; i++){ labels[i].classList.add('active'); }
+  }, 100);
+})
+
+var ready = (callback) => {
+  if (document.readyState != "loading") callback();
+  else document.addEventListener("DOMContentLoaded", callback);
+}
+
+ready(() => { 
+  /* Do things after DOM has fully loaded */ 
+  setTimeout(function(){ 
+    var labels = document.getElementsByTagName("label");
+    for(let i = 0; i < labels.length; i++){ labels[i].classList.add('active'); }
+  }, 100);
+});
+</script>
