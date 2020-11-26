@@ -14,8 +14,9 @@ RUN npm install --only=production
 
 #RUN npm audit fix
 
-ENV COSMOSDB_URI="test"
-
+ENV PORT=8080
+ENV COSMOSDB_URI="prod-conn-string"
+ENV COSMOS_EMULATOR="dev-conn-string"
 # Bundle app source
 COPY . .
 
